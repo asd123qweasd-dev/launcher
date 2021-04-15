@@ -10,7 +10,7 @@ services:
     networks:
       - alpha-dnr-dev
   alpha-admin:
-    image: ghcr.io/donetsk-dev/admin:latest
+    image: ghcr.io/donetsk-dev/admin:alpha
     restart: unless-stopped
     ports:
       - 3081:80

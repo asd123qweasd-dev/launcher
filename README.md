@@ -11,8 +11,8 @@ Docker пакет для запуска DNR.dev приложения в разн
 
 ## Usage
 
- - `docker-compose -f prod.yml up -d` - Запуск прода
  - `docker-compose up -d` - Запуск альфы
+ - `docker-compose -f prod.yml up -d` - Запуск прода
 
 Где запускается ?
  - [http://localhost:8085/](http://localhost:8085/)
