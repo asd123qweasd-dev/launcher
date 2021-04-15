@@ -13,6 +13,6 @@ services:
     image: ghcr.io/donetsk-dev/admin:latest
     restart: unless-stopped
     ports:
-      - 3081:3000
+      - 3081:80
     networks:
       - back
