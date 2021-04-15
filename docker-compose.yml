@@ -1,6 +1,6 @@
 version: "3.6"
 networks:
-  back:
+  alpha-dnr-dev:
 services:
   alpha-webapp:
     image: ghcr.io/donetsk-dev/webapp_dnr.dev:alpha
@@ -8,11 +8,11 @@ services:
     ports:
       - 3080:3000
     networks:
-      - back
+      - alpha-dnr-dev
   alpha-admin:
     image: ghcr.io/donetsk-dev/admin:latest
     restart: unless-stopped
     ports:
       - 3081:80
     networks:
-      - back
+      - alpha-dnr-dev
