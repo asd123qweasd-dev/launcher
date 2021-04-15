@@ -3,16 +3,16 @@ networks:
   back:
 services:
   webapp:
-    image: ghcr.io/donetsk-dev/webapp_dnr.dev:alpha
+    image: ghcr.io/donetsk-dev/webapp_dnr.dev:0.0.2
     restart: unless-stopped
     ports:
-      - 3080:3000
+      - 3070:3000
     networks:
       - back
   admin:
     image: ghcr.io/donetsk-dev/admin:latest
     restart: unless-stopped
     ports:
-      - 3081:3000
+      - 3071:80
     networks:
       - back
