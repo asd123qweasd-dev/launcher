@@ -1,24 +1,26 @@
-# DNR.dev app runner
+# DNR.dev app launcher
 
 Docker пакет для запуска DNR.dev приложения в разных режимах
 
 ## Актуальные версии
+[Просмотреть список всех версий](https://github.com/orgs/donetsk-dev/packages/container/admin/versions)
 
-- [Gateway - 0.0.1](registry.gitlab.com/dnr_dev/gateway:0.0.1)
-- [Web_client - 0.0.3](registry.gitlab.com/dnr_dev/client_ssr:0.0.3)
-- [nginx - latest](https://hub.docker.com/_/nginx)
+## Запуск
+ - `mv prod.yml docker-compose.yml` - переименовываем нужный конфиг
+ - `docker-compose up -d` - Запуск
+ - `docker-compose down` - Остановить
 
 
-## Usage
+## Занимаемые порты
+Прод
+ - 3070 - [сайт (dnr.dev)](https://admin.dnr.dev/)
+ - 3071 - [админка (admin.dnr.dev)](https://admin.dnr.dev/)
 
- - `docker-compose up -d` - Запуск альфы
- - `docker-compose -f prod.yml up -d` - Запуск прода
-
-Где запускается ?
- - [http://localhost:8085/](http://localhost:8085/)
+Альфа 
+ - 3080 - [сайт (alpha.dnr.dev)](https://alpha.dnr.dev/)
+ - 3081 - [админка (alpha-admin.dnr.dev)](https://alpha-admin.dnr.dev/)   
 
 
 ## Support
-
 [Gromov](https://t.me/gromov_io)
 
