@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: connect server
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.ALPHA_USERNAME }}
         password: ${{ secrets.ALPHA_PASSWORD }}
         port: ${{ secrets.ALPHA_PORT }}
-        script: whoami
+        script: docker ps
 
   printInputs:
     runs-on: ubuntu-latest
