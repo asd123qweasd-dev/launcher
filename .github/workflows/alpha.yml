@@ -18,12 +18,12 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
+        host: ${{ secrets.ALPHA_HOST }}
+        username: ${{ secrets.ALPHA_USERNAME }}
+        password: ${{ secrets.ALPHA_PASSWORD }}
+        port: ${{ secrets.ALPHA_PORT }}
         script: whoami
-        
+
   printInputs:
     runs-on: ubuntu-latest
     steps:
