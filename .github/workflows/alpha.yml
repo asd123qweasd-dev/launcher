@@ -16,8 +16,8 @@ jobs:
         password: ${{ secrets.ALPHA_PASSWORD }}
         port: ${{ secrets.ALPHA_PORT }}
         script: |
-          cd alpha.dnr.dev
-          docker-compose down --remove-orphans
+          cd dnr.dev
+          docker-compose -f alpha.yml down --remove-orphans
           git pull
-          docker-compose pull
-          docker-compose up -d
+          docker-compose -f alpha.yml pull
+          docker-compose -f alpha.yml up -d
