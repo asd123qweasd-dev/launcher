@@ -1,11 +1,11 @@
-name: Deploy Alpha - admin
+name: Deploy[alpha] - admin
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    name: connect server
+    name: connect to server alpha
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
