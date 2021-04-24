@@ -17,6 +17,6 @@ jobs:
         port: ${{ secrets.ALPHA_PORT }}
         script: |
           cd dnr.dev
-          echo y | docker-compose -f alpha.yml rm -sv alpha-admin
+          echo y | docker-compose -f alpha.yml rm -sv admin
           docker-compose -f alpha.yml pull admin
           docker-compose -f alpha.yml up -d admin
