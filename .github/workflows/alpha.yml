@@ -26,11 +26,11 @@ jobs:
           cd alpha.dnr.dev
           docker-compose down
           docker-compose pull
-          docker-compose up
+          docker-compose up -d
 
-  printInputs:
-    runs-on: ubuntu-latest
-    steps:
-    - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}"
+  # printInputs:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - run: |
+  #       echo "Log level: ${{ github.event.inputs.logLevel }}"
+  #       echo "Tags: ${{ github.event.inputs.tags }}"
