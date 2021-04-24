@@ -22,7 +22,11 @@ jobs:
         username: ${{ secrets.ALPHA_USERNAME }}
         password: ${{ secrets.ALPHA_PASSWORD }}
         port: ${{ secrets.ALPHA_PORT }}
-        script: docker ps
+        script: |
+          cd alpha.dnr.dev
+          docker-compose down
+          docker-compose pull
+          docker-compose up
 
   printInputs:
     runs-on: ubuntu-latest
