@@ -1,4 +1,4 @@
-name: Deploy Alpha
+name: Deploy Alpha - admin
 
 on:
   workflow_dispatch:
@@ -17,7 +17,6 @@ jobs:
         port: ${{ secrets.ALPHA_PORT }}
         script: |
           cd alpha.dnr.dev
-          docker-compose down --remove-orphans
-          git pull
-          docker-compose pull
-          docker-compose up -d
+          echo y | docker-compose rm -sv alpha-admin
+          docker-compose pull admin
+          docker-compose up -d admin
