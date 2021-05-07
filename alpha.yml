@@ -11,3 +11,8 @@ services:
     restart: unless-stopped
     ports:
       - 3081:80
+  s3:
+    image: ghcr.io/donetsk-dev/s3:1.0.0
+    restart: unless-stopped
+    ports:
+      - 3082:3002
